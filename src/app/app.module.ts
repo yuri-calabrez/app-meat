@@ -15,6 +15,7 @@ import { RestaurantComponent } from './restaurants/restaurant/restaurant.compone
 
 import {RestaurantService} from "./restaurants/restaurant/resturant.service";
 import {ShoppingCartService} from "./restaurant-detail/shopping-cart/shopping-cart.service";
+import {OrderService} from './order/order.service';
 
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { MenuComponent } from './restaurant-detail/menu/menu.component';
@@ -51,7 +52,7 @@ import { OrderItemsComponent } from './order/order-items/order-items.component';
   FormsModule,
   RouterModule.forRoot(ROUTES)
   ],
-  providers: [RestaurantService, ShoppingCartService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [RestaurantService, ShoppingCartService, OrderService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
