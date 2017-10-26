@@ -23,29 +23,31 @@ import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.compo
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 import { OrderComponent } from './order/order.component';
 import { InputComponent } from './shared/input/input.component';
+import { RadioComponent } from './shared/radio/radio.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent,
-    AboutComponent,
-    RestaurantsComponent,
-    RestaurantComponent,
-    RestaurantDetailComponent,
-    MenuComponent,
-    ShoppingCartComponent,
-    MenuItemComponent,
-    ReviewsComponent,
-    OrderComponent,
-    InputComponent
+  AppComponent,
+  HeaderComponent,
+  HomeComponent,
+  AboutComponent,
+  RestaurantsComponent,
+  RestaurantComponent,
+  RestaurantDetailComponent,
+  MenuComponent,
+  ShoppingCartComponent,
+  MenuItemComponent,
+  ReviewsComponent,
+  OrderComponent,
+  InputComponent,
+  RadioComponent
   ],
   imports: [
-    BrowserModule,
-    HttpModule,
-      FormsModule,
-    RouterModule.forRoot(ROUTES)
+  BrowserModule,
+  HttpModule,
+  FormsModule,
+  RouterModule.forRoot(ROUTES)
   ],
   providers: [RestaurantService, ShoppingCartService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
