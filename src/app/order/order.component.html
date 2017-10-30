@@ -14,8 +14,14 @@
             </div>
 
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-12 col-sm-9">
                     <p class="lead">Seus dados</p>
+                </div>
+
+                <div class="col-xs-12 col-sm-3">
+                    <span class="help-block pull-right has-error-block" *ngIf="orderForm.hasError('emailsNotMatch')">
+                        <i class="fa fa-remove"></i> E-mails não conferem
+                    </span>
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <mt-input-container errorMessage="Campo obrigatório"
@@ -26,7 +32,7 @@
                 </div>
 
                 <div class="col-sm-3 col-xs-12">
-                    <mt-input-container errorMessage="Campo obrigatório"
+                    <mt-input-container errorMessage="E-mail inválido"
                                         label="E-mail">
                         <input type="text" class="form-control" formControlName="email"
                                autocomplete="off" placeholder="E-mail">
@@ -34,7 +40,7 @@
                 </div>
 
                 <div class="col-sm-3 col-xs-12">
-                    <mt-input-container errorMessage="Campo obrigatório"
+                    <mt-input-container errorMessage="E-mail inválido"
                                         label="Confirmação de e-mail">
                         <input type="text" class="form-control" formControlName="emailConfirmation"
                                autocomplete="off" placeholder="Confirmação de e-mail">
@@ -108,7 +114,7 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <button [disabled]="!orderForm.valid || cartItems().length === 0" (click)="checkOrder(form.value)"
+                <button [disabled]="!orderForm.valid || cartItems().length === 0" (click)="checkOrder(orderForm.value)"
                         class="btn btn-success pull-right">
                     <i class="fa fa-credit-card"></i>
                     Concluir Pedido
