@@ -442,6 +442,30 @@
         }
       ],
       "id": 5
+    },
+    {
+      "name": "Joãozinho",
+      "email": "joao@mail.com",
+      "emailConfirmation": "joao@mail.com",
+      "address": "Rua da Porteira",
+      "number": "10",
+      "optionalAddress": "",
+      "paymentOption": "DEB",
+      "orderItem": [
+        {
+          "quantity": 1,
+          "menuId": "starb"
+        },
+        {
+          "quantity": 3,
+          "menuId": "espreso"
+        },
+        {
+          "quantity": 1,
+          "menuId": "capp"
+        }
+      ],
+      "id": 6
     }
   ]
 }
