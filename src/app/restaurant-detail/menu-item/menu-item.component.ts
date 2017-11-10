@@ -6,11 +6,11 @@ import {MenuItem} from "./menu-item.model";
     selector: 'mt-menu-item',
     templateUrl: './menu-item.component.html',
     animations: [
-        trigger('menuItemAppeared', [
-            state('ready', style({opacity: 1})),
-            transition('void => ready', [
-                style({opacity: 0, transform: 'translateY(-10px)'}),
-                animate('300ms, 0s, ease-in')
+    trigger('menuItemAppeared', [
+        state('ready', style({opacity: 1})),
+        transition('void => ready', [
+            style({opacity: 0, transform: 'translateY(-10px)'}),
+            animate('300ms 0s ease-in')
             ])
         ])
     ]
