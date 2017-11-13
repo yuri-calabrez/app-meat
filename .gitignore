@@ -8,6 +8,7 @@
 /node_modules
 /bower_components
 meat-app-template-master
+meat-app-template
 
 # IDEs and editors
 /.idea

@@ -13,7 +13,7 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 //
 server.post('/login', auth_1.handleAuthentication);
-server.use(authz_1.handleAuthorization);
+server.use('/orders', authz_1.handleAuthorization);
 // Use default router
 server.use(router);
 var options = {
